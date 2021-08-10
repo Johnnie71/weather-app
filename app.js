@@ -15,10 +15,10 @@ const forecast = require('./utilis/forecast');
 //     }
 // })
 
-geoCode('Boston', (error, data) => {
-    console.log('Error', error);
-    console.log('Data', data)
-});
+// geoCode('Boston', (error, data) => {
+//     console.log('Error', error);
+//     console.log('Data', data)
+// });
 
 // Goal: Create a reusable function for getting the forecast
 //

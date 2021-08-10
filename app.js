@@ -29,7 +29,7 @@ const geoCode = require('./utilis/goecode');
 // })
 
 
-geoCode('12what', (error, data) => {
+geoCode('Boston', (error, data) => {
     console.log('Error', error);
     console.log('Data', data)
 });

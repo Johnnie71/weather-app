@@ -46,7 +46,7 @@ const geoCode = (address, callback) => {
     })
 };
 
-geoCode('New York', (error, data) => {
+geoCode('12what', (error, data) => {
     console.log('Error', error);
     console.log('Data', data)
 });

@@ -18,6 +18,4 @@ const geoCode = (address, callback) => {
     })
 };
 
-module.exports = {
-    geoCode: geoCode
-}
+module.exports = geoCode;

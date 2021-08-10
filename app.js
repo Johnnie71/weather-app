@@ -29,10 +29,19 @@ const request = require('postman-request');
 // })
 
 const geoCode = (address, callback) => {
-    const url= `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(address)}.json?access_token=pk.eyJ1Ijoib2RhbmlzNzEiLCJhIjoiY2tzNTFrdXBsMTJ1ZzJ2bnRnYnR4NGFlZiJ9.kBfngGdrZ4v7jOOkBnUNZQ&limit=1`
+    const url= `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(address)}.json?access_token=pk.eyJ1Ijoib2RhbmlzNzEiLCJhIjoiY2tzNTFrdXBsMTJ1ZzJ2bnRnYnR4NGFlZiJ9.kBfngGdrZ4v7jOOkBnUNZQ&limit=1`;
+
+    request({url: url, json: true}, (error, response) => {
+        if(error){
+            callback('Unable to connect to location services!', undefined)
+        } else if(response.body.features.length === 0){
+            callback('Unable to find location. Try another search.', undefined)
+        }
+    })
 };
 
 geoCode('New York', (error, data) => {
-
+    console.log('Error', error);
+    console.log('Data', data)
 });
 

@@ -1,6 +1,6 @@
 const request = require('postman-request');
 
-const url = 'http://api.weatherstack.com/current?access_key=3cd3eee99cacfba5d7e860d49be3016d&query=37.8267,-122.4233&units=f';
+// const url = 'http://api.weatherstack.com/current?access_key=3cd3eee99cacfba5d7e860d49be3016d&query=37.8267,-122.4233&units=f';
 
 // request({ url: url, json: true }, (error, response) => {
 //     if(error){
@@ -13,7 +13,7 @@ const url = 'http://api.weatherstack.com/current?access_key=3cd3eee99cacfba5d7e8
 //     }
 // })
 
-const geocodeURL = "https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1Ijoib2RhbmlzNzEiLCJhIjoiY2tzNTFrdXBsMTJ1ZzJ2bnRnYnR4NGFlZiJ9.kBfngGdrZ4v7jOOkBnUNZQ&limit=1"
+// const geocodeURL = "https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1Ijoib2RhbmlzNzEiLCJhIjoiY2tzNTFrdXBsMTJ1ZzJ2bnRnYnR4NGFlZiJ9.kBfngGdrZ4v7jOOkBnUNZQ&limit=1"
 
 // request({ url: geocodeURL, json: true}, (error, response) => {
 //     if(error){
@@ -29,10 +29,10 @@ const geocodeURL = "https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Ange
 // })
 
 const geoCode = (address, callback) => {
-
+    const url= `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?access_token=pk.eyJ1Ijoib2RhbmlzNzEiLCJhIjoiY2tzNTFrdXBsMTJ1ZzJ2bnRnYnR4NGFlZiJ9.kBfngGdrZ4v7jOOkBnUNZQ&limit=1`
 };
 
 geoCode('Newark', (error, data) => {
-    
+
 });
 

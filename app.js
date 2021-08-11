@@ -3,10 +3,7 @@ const forecast = require('./utilis/forecast');
 
 const address = process.argv[2];
 
-geoCode(address, (error, data) => {
-//destructuring the data
-    const {latitude, longitude} = data
-
+geoCode(address, (error, {latitude, longitude, location}) => {
 //checking to see if there is an error
     if(error){
         return console.log(error)
@@ -15,13 +12,13 @@ geoCode(address, (error, data) => {
     if(!address){
         return console.log('Address needed!')
     }
-    
+
  //if everything passes then the forecast is checked   
     forecast(latitude, longitude, (error, forecastData) => {
         if(error){
             return console.log(error)
         }
-        console.log(data.location)
+        console.log(location)
         console.log(forecastData)
       })
 });

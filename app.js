@@ -1,8 +1,8 @@
 const geoCode = require('./utilis/goecode');
 const forecast = require('./utilis/forecast');
 
-geoCode('Miami', (error, data) => {
-    
+geoCode('Elizabeth, NJ', (error, data) => {
+
     if(error){
         return console.log(error)
     }

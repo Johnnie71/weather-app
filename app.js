@@ -14,7 +14,7 @@ geoCode(address, (error, { latitude, longitude, location } = {}) => {
         return console.log(error)
     }
 
- //if everything passes then the forecast is checked   
+ //if no error then the forecast is checked   
     forecast(latitude, longitude, (error, forecastData) => {
         if(error){
             return console.log(error)

@@ -1,4 +1,3 @@
-const request = require('postman-request');
 const geoCode = require('./utilis/goecode');
 const forecast = require('./utilis/forecast');
 

@@ -6,6 +6,7 @@ const address = process.argv[2];
 geoCode(address, (error, data) => {
 //destructuring the data
     const {latitude, longitude} = data
+
 //checking to see if there is an error
     if(error){
         return console.log(error)
@@ -15,6 +16,7 @@ geoCode(address, (error, data) => {
         return console.log('Address needed!')
     }
     
+ //if everything passes then the forecast is checked   
     forecast(latitude, longitude, (error, forecastData) => {
         if(error){
             return console.log(error)

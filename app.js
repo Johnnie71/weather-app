@@ -4,7 +4,7 @@ const forecast = require('./utilis/forecast');
 geoCode('Boston', (error, data) => {
 
     if(error){
-        console.log(error)
+        return console.log(error)
     }
     console.log('Error', error);
     console.log('Data', data)
